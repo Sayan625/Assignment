@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
+  position: relative;
+  min-height: calc(100vh - 50px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+  padding: 20px 0;
+
+}
+
+.page_title{
+
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.single_page{
+  position: relative;
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 50px;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  z-index: 10;
+  background-color: rgb(34, 34, 34);
+  border-bottom: 1px solid orange;
+}
+
+.navbar a{
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 22px;
+  padding: 12px 20px;
+  color: orange;
+
+}
+
+.navbar a:hover{
+background-color: orange;
+color: rgb(34, 34, 34);
+}
+
+.row_view{
+  margin-bottom: 20px;
+  border: 1px solid orange;
+  border-radius: 5px;
+  color: orange;
+  text-decoration: none;
+}
+
+.row_view:hover{
+  background-color: orange;
+  color: rgb(34, 34, 34);
+}
+.user_row{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: hidden;
+}
+
+.user_row img{
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.user_row h3{
+  text-align: justify;
+  
+}
+
+
+.user{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  border: 1px solid orange;
+  border-radius: 8px;
+  margin: 15px 15px 20px 15px;
+
+}
+
+.card_header{
+  position: relative;
+  text-align: center;
+  font-weight: 600;
   color: white;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid orange;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.card_header img{
+  position: absolute;
+  left: calc(50% - 62px);
+  width: 125px;
+  border-radius: 50%;
+  border: 5px solid orange;
+  transform: translateY(-50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text_group{
+  margin-top: 80px;
+  font-size: 22px;
+}
+
+.text_group p{
+  margin-bottom: 20px;
+}
+.card_footer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: orange;
+}
+
+.card_footer p:nth-child(2){
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.post_view{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  text-align: center;
+  padding: 15px;
+  border-right: 1px solid orange;
+  border-left: 1px solid orange;
+  
+}
+
+.post_title{
+margin: 15px 0;
+border-top: 1px solid orange;
+}
+
+.post_desc{
+  margin-top: 10px;
+text-align: justify;
+}
+
+.form_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px);
+
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.form input, .form textarea{
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid orange;
+  outline: none;
+
+}
+
+button{
+  padding: 5px;
+  background-color: rgb(34, 34, 34);
+  color: orange;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: orange;
+  color: rgb(34, 34, 34);
+}
+
+.create_new{
+  padding: 10px 15px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid orange;
+  font-size: 28px;
+}
+
+.create_new a{
+  text-decoration: none;
+  color: inherit;
 }
